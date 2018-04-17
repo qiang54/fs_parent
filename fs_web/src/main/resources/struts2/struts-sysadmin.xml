@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="sysadmin" namespace="/sysadmin" extends="struts-default">
+        <action name="deptAction_*" class="deptAction" method="{1}">
+            <result name="list">/WEB-INF/pages/sysadmin/dept/jDeptList.jsp</result>
+            <result name="toView">/WEB-INF/pages/sysadmin/dept/jDeptView.jsp</result>
+            <result name="toCreate">/WEB-INF/pages/sysadmin/dept/jDeptCreate.jsp</result>
+            <result name="toUpdate">/WEB-INF/pages/sysadmin/dept/jDeptUpdate.jsp</result>
+            <result name="alist" type="redirectAction">deptAction_list</result>
+
+        </action>
+
+    </package>
+
+</struts>
